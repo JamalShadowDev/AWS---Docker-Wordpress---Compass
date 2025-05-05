@@ -24,7 +24,7 @@ Este ambiente local permite rodar o **WordPress com MySQL** usando **Docker Comp
 ```sql
 📁 1-local
 │
-├── 📁 img                # Imagens para o README
+├── 📁 img               # Imagens para o README
 ├── .env                 # Variáveis de ambiente
 ├── docker-compose.yml   # Configuração do Docker Compose
 └── README.md            # Este arquivo
