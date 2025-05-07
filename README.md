@@ -35,7 +35,7 @@ O repositório está dividido em quatro pastas:
 ├── 📁 2-manual-aws
 │   └── Instâncias criadas manualmente na AWS (EC2, RDS, EFS), sem automação
 │
-├── 📁 3-user-data
+├── 📁 3-userdata
 │   └── Instâncias criadas com User Data e scripts automatizando parte da configuração
 │
 ├── 📁 4-cloudformation
