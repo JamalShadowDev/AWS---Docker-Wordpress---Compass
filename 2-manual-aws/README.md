@@ -262,7 +262,7 @@ Na criação da "Key pair" o sistema já faz o download dela, no caso do windows
 ssh -i NOME_DA_CHAVE ubuntu@MEU_IP
 ```
 
-<img src="./img/abrir-GitBash.png" alt="Conectando com git bash" width="500">
+<img src=".\img\abrir-GitBash.png" alt="Conectando com git bash" width="500">
 <img src="./img/acesso-EC2.png" alt="Conectando a EC2" width="400">
 
 ---
