@@ -12,6 +12,7 @@ Realizar o deploy de uma aplicação WordPress na AWS com os seguintes requisito
 - Banco de dados MySQL hospedado via Amazon RDS
 - Utilização do Amazon EFS para armazenar arquivos estáticos do WordPress
 - Controle de acesso externo via AWS Load Balancer (sem uso de IP público direto)
+- Infraestrutura escalável com Auto Scaling Group
 - Infraestrutura dentro de uma VPC
 - Aplicação acessível pela porta 80 ou 8080
 - Versionamento no GitHub e documentação completa
