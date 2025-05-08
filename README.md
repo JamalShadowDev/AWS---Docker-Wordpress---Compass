@@ -51,6 +51,7 @@ O repositório está dividido em quatro pastas:
 - **Amazon RDS (MySQL)**
 - **Amazon EFS**
 - **AWS Load Balancer**
+- **Auto Scaling Group**
 - **VPC, Subnets, Security Groups**
 - **CloudFormation**
 - **Shell Script (User Data)**
@@ -72,11 +73,12 @@ Ambiente na AWS configurado manualmente:
 Automação parcial com `user_data.sh`:
 - Instalação automática do Docker na inicialização da EC2
 - Deploy do WordPress automatizado
+- Integração com Auto Scaling Group, Load Balancer e Target Group
 - Recursos como RDS e EFS ainda configurados via console
 
 ### [`4-cloudformation/`](./4-cloudformation/README.md)
 Ambiente 100% automatizado via AWS CloudFormation:
-- VPC, subnets, EC2, RDS, EFS, SGs, Load Balancer e deploy do WordPress
+- VPC, subnets, EC2, RDS, EFS, SGs, Load Balancer, Auto Scaling Group e deploy do WordPress
 - Reproduzível com um clique
 
 ## 🖼️ Topologia Referencial
@@ -93,4 +95,24 @@ Cada pasta contém um `README.md` com:
 
 ---
 
-Este projeto reflete não apenas a implementação técnica, mas também minha forma de pensar, organizar e aprender de forma prática durante o Programa de Bolsas da Compass.UOL.
+## ✅ Conclusão
+
+Este projeto teve como objetivo explorar diferentes abordagens para implantação de uma aplicação WordPress utilizando Docker, desde o ambiente local até a nuvem, passando por diferentes níveis de automação com serviços da AWS.
+
+### 🔹 Etapa 1 – Ambiente Local (`1-local/`)
+A configuração inicial com Docker Compose permitiu validar o funcionamento da aplicação WordPress de forma isolada na máquina local. Essa etapa foi essencial para testar a integração entre o WordPress e o banco de dados MySQL, garantindo que a aplicação estivesse funcional antes de migrar para a nuvem.
+
+### 🔹 Etapa 2 – Ambiente Manual na AWS (`2-manual-aws/`)
+Com o ambiente local validado, a aplicação foi migrada para a AWS, com recursos configurados manualmente via console. Essa abordagem possibilitou entender com mais profundidade os serviços utilizados, sua interação e os aspectos de segurança e conectividade.
+
+### 🔹 Etapa 3 – Automação Parcial com User Data (`3-user-data/`)
+Para tornar a configuração mais eficiente e reduzir a dependência de ações manuais, foi utilizado o script `user_data.sh` para automatizar a instalação do Docker e o deploy do WordPress ao iniciar a instância EC2. Além disso, nesta etapa foram incorporados recursos como **Load Balancer (ALB)**, **Target Group** e **Auto Scaling Group**, permitindo maior escalabilidade, disponibilidade e balanceamento de carga da aplicação.
+
+### 🔸 Etapa 4 – Automação Completa com CloudFormation (`4-cloudformation/`)
+A etapa final, que consiste em automatizar completamente a infraestrutura com AWS CloudFormation (incluindo VPC, subnets, instâncias, RDS, EFS, Load Balancer, Auto Scaling e o deploy do WordPress), ainda não foi concluída. No entanto, pretendo realiza-la futuramente, consolidando o projeto com uma solução totalmente automatizada e reprodutível com um clique.
+
+---
+
+Este projeto reflete não apenas a implementação técnica, mas também minha forma de pensar, organizar e aprender de forma prática durante o **Programa de Bolsas da Compass.UOL**. A experiência permitiu aplicar conceitos de DevOps, cloud computing e automação de forma progressiva e realista, sempre com foco na melhoria contínua.
+
+O progresso alcançado até aqui demonstra uma evolução clara e sólida no uso de práticas modernas, e a próxima etapa com CloudFormation será fundamental para concluir esse ciclo com excelência.
